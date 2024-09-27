@@ -61,7 +61,7 @@ div.highway-slider ul.highway-lane li.highway-car:hover{
 }
 
 #infinite div.highway-barrier ul.highway-lane {
-  width: calc(100 px * 20 *3 ?>);
+  width: calc(100 px * 20 * 3);
 }
 #infinite div.highway-barrier ul.highway-lane li.highway-car {
   width: 100px;

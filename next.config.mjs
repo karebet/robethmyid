@@ -35,15 +35,7 @@ const nextConfig = {
               protocol: 'https',
               hostname: 'wsrv.nl',
               pathname: '**',
-            },
-            {
-              protocol: 'https',
-              hostname: 'www.simplilearn.com',
-              pathname: '**',
-            },
-
-
-            
+            }            
           ]
       }
   };
