@@ -4,7 +4,10 @@ const nextConfig = {
       styledComponents: true,
     },reactStrictMode: true,
     env: {
-        BASE_URL: process.env.URLDATA,
+        URLDATA: process.env.URLDATA,
+    },
+    experimental: {
+      urlImports: ['https://d25zvmpxpn9d7y.cloudfront.net'],
     },
       images: {
         remotePatterns: [
@@ -32,7 +35,15 @@ const nextConfig = {
               protocol: 'https',
               hostname: 'wsrv.nl',
               pathname: '**',
-            }
+            },
+            {
+              protocol: 'https',
+              hostname: 'www.simplilearn.com',
+              pathname: '**',
+            },
+
+
+            
           ]
       }
   };

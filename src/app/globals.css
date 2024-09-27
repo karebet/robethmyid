@@ -1,3 +1,12 @@
+.body{
+  overflow: hidden;
+}
+/* @import url('https://d25zvmpxpn9d7y.cloudfront.net/assets/plug/fap582/css/all.min.css');
+@import url('https://fonts.googleapis.com');
+@import url('https://fonts.gstatic.com');
+@import url('fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&display=swap'); */
+
+
 .bg-light-primary {
   color: #0348d7 !important; }
 .bg-primary {
