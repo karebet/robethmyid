@@ -4,11 +4,11 @@ export default async function Home() {
   const ambildatax = async () => {
     const url = process.env.URLDATA;
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, { cache: 'no-store' });
       if (!response.ok) {
         throw new Error('Failed to fetch');
       }
-      const data = await response.json();
+      const data = await response.json({ revalidated: true });
       return data;
     } catch (error) {
       console.error("Error fetching packages:", error);

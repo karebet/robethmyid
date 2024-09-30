@@ -4,6 +4,8 @@ import Link from "next/link";
 import Nav from "@/app/component/_nav"
 import Timeline from "@/app/home/_timeline"
 import Skill from "@/app/home/_skill"
+import Portofolio from "@/app/home/_portfolio"
+
 
 import { useRef, useEffect,useState } from "react";
 import { datarobeth } from "@/app/lib/data";
@@ -164,6 +166,8 @@ export default function _home({ data }) {
         </div>
       </section> 
       <Skill data={databs.skill} />
+      <Portofolio data={databs.portfolio} />
+      
     </div>
   );
 }

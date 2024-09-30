@@ -35,7 +35,12 @@ const nextConfig = {
               protocol: 'https',
               hostname: 'wsrv.nl',
               pathname: '**',
-            }            
+            } ,
+            {
+              protocol: 'https',
+              hostname: 'raw.githubusercontent.com',
+              pathname: '**',
+            }   
           ]
       }
   };

@@ -630,8 +630,9 @@ body {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: url("https://d8uxk5ybnhrkr.cloudfront.net/external/rbt/zroam/20230726-page404.jpg") no-repeat;
-  -webkit-background-clip: text;
+  /* background: url("https://d8uxk5ybnhrkr.cloudfront.net/external/rbt/zroam/20230726-page404.jpg") no-repeat;
+   */
+   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: cover;
   background-position: center; }
@@ -684,4 +685,57 @@ body {
       50% {
           border-color: transparent;
       }
+  }
+
+
+
+  .slide-option {
+  }
+  .slide-option .no-marg {
+    margin: 0 0 0 0;
+  }
+  div.highway-slider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  div.highway-slider div.highway-barrier {
+    overflow: hidden;
+    position: relative;
+  }
+  div.highway-slider ul.highway-lane {
+    display: flex;
+    height: 100%;
+  }
+  div.highway-slider ul.highway-lane li.highway-car {
+      transition: filter 0.6s ease-in-out;
+      filter: grayscale(100%);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    padding: 0px 25px;
+  }
+  div.highway-slider ul.highway-lane li.highway-car:hover{
+      filter: grayscale(0%);
+  }
+  @-webkit-keyframes translateinfinite {
+    100% {
+      transform: translateX(calc(-100px * 20));
+    }
+  }
+  @keyframes translateinfinite {
+    100% {
+      transform: translateX(calc(-100px * 20));
+    }
+  }
+  
+  #infinite div.highway-barrier ul.highway-lane {
+    width: calc(100 px * 20 * 3);
+  }
+  #infinite div.highway-barrier ul.highway-lane li.highway-car {
+    width: 100px;
+    -webkit-animation: translateinfinite 55s linear infinite;
+            animation: translateinfinite 55s linear infinite;
   }
