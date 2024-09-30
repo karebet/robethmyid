@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function _portfolio({data=[]}) {
     return (
         <section id="allportofolio" class="container mb-5 pb-5" >
-            <span class="h1 mb-0 d-inline-block">{data.length} </span><span class=" fw-300">Portofolio</span>
+            <span class="h1 mb-0 d-inline-block">{data.length} </span><span class=" fw-300">Portofolio12</span>
             {
                 data.map((x,i)=>(
                     <Link class="d-block shadow project-item  rounded-5 <?= $val['bg'] ?> <?= $val['tx'] ?> mb-5 px-5 text-decoration-none" target="_blank" href="<?= $val['url'] ?>">
