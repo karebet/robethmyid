@@ -9,5 +9,5 @@ export async function POST(req) {
 	const chat_id= process.env.TELE_CHATID;
     var url = 'https://api.telegram.org/bot'+api_token+'/sendMessage'+"?chat_id="+chat_id+"&text="+encodeURIComponent(t)+"&parse_mode=html";;
     var response = await fetch(url);
-    return NextResponse.json({ status: true,response:response});
+    return NextResponse.json({ status: true});
 }
