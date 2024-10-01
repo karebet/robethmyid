@@ -730,12 +730,209 @@ body {
       transform: translateX(calc(-100px * 20));
     }
   }
+
+  @-webkit-keyframes translateinfinitebalik {
+    100% {
+      transform: translateX(calc(100px * 20));
+    }
+  }
+  @keyframes translateinfinitebalik {
+    100% {
+      transform: translateX(calc(100px * 20));
+    }
+  }
   
   #infinite div.highway-barrier ul.highway-lane {
-    width: calc(100 px * 20 * 3);
+    width: calc(100px * 20 * 3);
+  }
+  #infinite.balik div.highway-barrier ul.highway-lane {
+    position: relative;
+    left: calc((-100px * 20 * 2) );
   }
   #infinite div.highway-barrier ul.highway-lane li.highway-car {
     width: 100px;
-    -webkit-animation: translateinfinite 55s linear infinite;
-            animation: translateinfinite 55s linear infinite;
+    -webkit-animation: translateinfinite 60s linear infinite;
+            animation: translateinfinite 60s linear infinite;
   }
+  #infinite.balik div.highway-barrier ul.highway-lane li.highway-car {
+    width: 100px;
+    -webkit-animation: translateinfinitebalik 60s linear infinite;
+            animation: translateinfinitebalik 60s linear infinite;
+  }
+
+
+
+
+.bg-izi{
+    background-color: #29a9ec;
+}
+.bg-wa{
+    background-color: #128C7E;
+}
+.bg-rasabakery{
+    background-color: #bd262c;
+}
+.bg-omaelly{
+    background-color: #9c835e;
+}
+.bg-scenello{
+    background-color: #16273b;
+}
+.bg-eastern{
+    background-color: #6d0019;
+}
+.bg-lobuntaland{
+    background-color: #719430;
+}
+.bg-lobuntalubricant{
+    background-color: #d20c00;
+}
+.bg-elhart{
+    background-color: #311201;
+}
+.bg-gamess{
+    background-color: #4b177a;
+}
+
+.bg-e16416{
+    background-color: #e16416;
+}
+.bg-2b3772{
+    background-color: #2b3772;
+}
+.bg-1a180c{
+    background-color: #1a180c;
+}
+.text-c5904c{
+    color: #c5904c;
+}
+
+.bg-xxxx{
+    background-color: #4b177a;
+}
+.img-rounded-project{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: auto ;
+}
+
+.img-rounded-project-area{
+    max-height: 200px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+}
+.project-item:hover .img-rounded-project-area{
+    max-height: 400px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+
+.project-item:hover .img-rounded-project-area{
+  max-height: auto;
+}
+
+
+
+.top-rounded{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.bottom-rounded{
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.message-wa{
+  width: 75%;
+  padding: 15px;
+  border-radius: 5px;
+  background: white;
+  position: relative;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+.message-wa-robeth-arrow{
+  position: absolute;
+  float: left;
+  left: -11px;
+  top: 0px;
+}
+.message-wa-robeth-arrow::after{
+  content: "";
+  position: absolute;
+  border-top: 15px solid white;
+  border-left: 15px solid transparent;
+  border-radius: 4px 0 0 0px;
+  width: 0;
+  height: 0;
+}
+
+.message-wa-my{
+  margin-left: auto;
+}
+
+.message-wa-my-arrow{
+  position: absolute;
+  float: left;
+  right: -11px;
+  top: 0px;
+  transform: scaleX(-1);
+}
+.message-wa-my-arrow::after{
+  content: "";
+  position: absolute;
+  border-top: 15px solid white;
+  border-left: 15px solid transparent;
+  border-radius: 4px 0 0 0px;
+  width: 0;
+  height: 0;
+}
+.bg-wa-chat{
+  background-color: #ECE5DD !important;
+}
+.bg-wa{
+  background-color: #128C7E;
+}
+
+
+
+.rounded-linkedin {
+  width: 75%;
+}
+@media only screen and (max-width: 450px) {
+  .rounded-linkedin {
+      width: 100%;
+  }
+}
+
+.footer-bullet-message::before {
+  content: "";
+  z-index: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: -50%;
+  right: 0;
+  background: orangered;
+}
+
+.footer-bullet-message::after {
+  content: "";
+  z-index: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: -50%;
+  right: 0;
+  background: url("https://umkmku.s3.ap-southeast-1.amazonaws.com/img/20240306-logorobeth.png") orangered;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}

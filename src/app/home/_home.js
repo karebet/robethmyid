@@ -5,6 +5,7 @@ import Nav from "@/app/component/_nav"
 import Timeline from "@/app/home/_timeline"
 import Skill from "@/app/home/_skill"
 import Portofolio from "@/app/home/_portfolio"
+import Footer from "@/app/home/_footer"
 
 
 import { useRef, useEffect,useState } from "react";
@@ -21,6 +22,13 @@ export default function _home({ data }) {
   const [typingfinish, setTypingfinish] = useState(false);
   
   let index = 0;
+  const iconku = {
+    'wa':'fab fa-whatsapp fa-3x',
+    'email':'fa fa-at fa-3x',
+    'github':'fab fa-github fa-3x',
+    'linkedin':'fab fa-linkedin-in fa-3x',
+    'link':'fas fa-link fa-3x',
+  };
   
 
   
@@ -43,7 +51,9 @@ export default function _home({ data }) {
 
 
   useEffect(() => {
-    
+    typeof document !== undefined
+    ? require("bootstrap/dist/js/bootstrap")
+    : null;
 
     const circle = document.querySelector('.circle-f-1');
     ref_hoverDiv.current.addEventListener('mousemove', e => {
@@ -103,39 +113,30 @@ export default function _home({ data }) {
                 <div className="flip-card animated-toright cursor img-avatar-big rounded-circle">
                   <div className="flip-card-inner ">
                     <div className="flip-card-front  border-0 rounded-circle">
-                      <Image priority={true} sizes="100vw" width={0} height={0} alt="Achmed Robeth Muzaki" className=""
-                        src="https://umkmku.s3.ap-southeast-1.amazonaws.com/img/20240306-logorobeth.png" />
+                      <Image priority={true} sizes="100vw" width={0} height={0} alt={data.name} className=""
+                        src={data.logo} />
                     </div>
                     <div className="flip-card-back border-0 rounded-circle">
-                      <Image priority={true} sizes="100vw" width={0} height={0} alt="Achmed Robeth Muzaki" className=""
-                        src="https://umkmku.s3.ap-southeast-1.amazonaws.com/img/20240306-logorobeth.png" />
+                      <Image priority={true} sizes="100vw" width={0} height={0} alt={data.name}  className=""
+                        src={data.logo}  />
 
                     </div>
                   </div>
                 </div>
                 <Image priority={true} sizes="100vw" width={0} height={0} className="img-avatar-big img-avatar-q position-absolute  rounded-circle"
-                  src="https://umkmku.s3.ap-southeast-1.amazonaws.com/rbtimg/RBT.png" alt="Achmed Robeth Muzaki" />
+                  src={data.image}  alt={data.name}  />
               </div>
               <p className="text-lg-center my-3">
-                <Link target="_blank" href="//wa.me/6282170699887"
-                  className="text-dark text-decoration-noned-inline-block"><i className="fab fa-whatsapp fa-3x"></i></Link>
-                <Link target="_blank" href="mailto:karebetconnec@gmail.com"
-                  className="text-dark text-decoration-none d-inline-block"><i className="fa fa-at fa-3x"></i>
-                </Link>
-                <Link target="_blank" href="//github.com/karebet"
-                  className="text-dark text-decoration-none d-inline-block">
-                  <i className="fab fa-github fa-3x"></i>
-                </Link>
-                <Link target="_blank" href="//www.linkedin.com/in/achmed-robeth-muzaki"
-                  className="text-dark text-decoration-none  d-inline-block">
-                  <i className="fab fa-linkedin-in fa-3x"></i>
-                </Link>
-                <Link target="_blank" href="//facebook.com/Karebetconnec"
-                  className="text-dark text-decoration-none  d-inline-block">
-                  <i className="fab fa-facebook fa-3x"></i>
-                </Link>
-
-
+                {
+                  data.link_sosmed.map((item, index) => {
+                    return (
+                      <Link key={index} target="_blank" href={item.link}
+                        className="text-dark text-decoration-none d-inline-block me-2">
+                        <i className={iconku[item.icon]}></i>
+                      </Link>
+                    )
+                  })
+                }
               </p>
             </div>
           </div>
@@ -167,6 +168,7 @@ export default function _home({ data }) {
       </section> 
       <Skill data={databs.skill} />
       <Portofolio data={databs.portfolio} />
+      <Footer data={databs} />
       
     </div>
   );

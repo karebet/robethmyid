@@ -1,4 +1,5 @@
 {
   "https://d25zvmpxpn9d7y.cloudfront.net/assets/plug/fap582/css/all.min.css": { "integrity": "sha512-N9KpvAxqIz/+Yn8M0Gb5CDCmc8KHS+qFil0Q86nk85ruGhUAs3hLn0/rHP/HPvLP/GEFzXoS2i33MeeQ3/o3/g==", "contentType": "text/css" },
+  "https://umkmku.s3.ap-southeast-1.amazonaws.com/img/20240306-logorobeth.png": { "integrity": "sha512-1s9lYqNWnrf1/iaTKJ1E4oq0ghA+1Z3MdYXDdb9TyMoraC4VLjaPjmOLVfte1BA6bsrsdoQ3qZgBPYr9oE/9Jw==", "contentType": "image/png" },
   "version": 1
 }

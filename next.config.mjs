@@ -7,7 +7,7 @@ const nextConfig = {
         URLDATA: process.env.URLDATA,
     },
     experimental: {
-      urlImports: ['https://d25zvmpxpn9d7y.cloudfront.net'],
+      urlImports: ['https://d25zvmpxpn9d7y.cloudfront.net','https://umkmku.s3.ap-southeast-1.amazonaws.com'],
     },
       images: {
         remotePatterns: [

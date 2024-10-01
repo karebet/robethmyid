@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google'
 
 
 export const metadata = {
-  title: "Achmed Robeth Muzaki | robeth.my.id x",
+  title: "Achmed Robeth Muzaki | robeth.my.id",
   description: "Fullstack Developer & Head of IT di iziRoam. sudah berpengalaman lebih dari 10 tahun di bidang Teknologi",
 };
 
