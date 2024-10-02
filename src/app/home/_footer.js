@@ -9,6 +9,7 @@ export default function _footer({data=[]}) {
     const [responWA, setResponWA] = useState(false);
     const areaemail = useRef(null);
     const areamessage = useRef(null);
+    const areamessagetextarea = useRef(null);
     
 
     const [chat, setChatData] = useState([
@@ -34,8 +35,11 @@ export default function _footer({data=[]}) {
         datalama.push({user:'me',message:message});
         setChatData(datalama);
         try {
-            const response = await fetch('api/sendmessage'.toString(),{
+            const response = await fetch('https://cl1l5f4jy0.execute-api.ap-southeast-1.amazonaws.com/be/robethmyid-contact'.toString(),{
                  method: "POST",
+                 headers: {
+                    'Accept': 'application/json'
+                  },
                  body: JSON.stringify({email, message}),
             });
             if (!response.ok) {
@@ -47,6 +51,7 @@ export default function _footer({data=[]}) {
                     datalama.push({user:'robeth',message:'Baik, tunggu sebentar ya, saya akan menghubungi Anda segera.'});
                     setChatData(datalama);
                     setMessage("");
+                    areamessagetextarea.current.value = "";
             }
           } catch (error) {
             console.error("Error fetching packages:", error);
@@ -89,8 +94,7 @@ export default function _footer({data=[]}) {
                             <div className="rounded-linkedin d-block rounded-pill p-3 border border-dark">
                                 <div className="row">
                                     <div className="col-4 col-md-3">
-                                        <Image sizes="100vw" width={0} height={0}  className="w-100 h-auto rounded-circle" src={data.image}
-                                            alt={data.title} />
+                                        <Image sizes="100vw" width={0} height={0}  className="w-100 h-auto rounded-circle" src={data.image} alt={data.title} />
                                     </div>
                                     <div className="col-8 col-md-9 text-start">
                                         <span className="mb-0 h5 fw-bold">Achmed Robeth Muzaki</span>
@@ -127,9 +131,7 @@ export default function _footer({data=[]}) {
                                     className="btn-close h-auto text-white"
                                     data-bs-dismiss="modal"
                                     aria-label="Close"
-                                >
-                                    <i className="fal fa-times fa-2x"></i>
-                                </span>
+                                ></span>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +167,7 @@ export default function _footer({data=[]}) {
                         <div className="modal-body bottom-rounded bg-wa-chat">
                             <div className="row">
                                         <div className="col-10">
-                                            <textarea onChange={(e)=>setMessage(e.target.value)} id="modal-message" placeholder="Ketik disini" className="form-control rounded-4" name="" rows="1"></textarea>
+                                            <textarea ref={areamessagetextarea} onChange={(e)=>setMessage(e.target.value)} id="modal-message" placeholder="Ketik disini" className="form-control rounded-4" name="" rows="1"></textarea>
                                         </div>
                                         <div className="col-2">
                                             <button onClick={async function(e){

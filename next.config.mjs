@@ -3,11 +3,12 @@ const nextConfig = {
     compiler: {
       styledComponents: true,
     },reactStrictMode: true,
+    crossOrigin: 'anonymous',
     env: {
         URLDATA: process.env.URLDATA,
     },
     experimental: {
-      urlImports: ['https://d25zvmpxpn9d7y.cloudfront.net','https://umkmku.s3.ap-southeast-1.amazonaws.com'],
+      urlImports: ['https://d25zvmpxpn9d7y.cloudfront.net','https://umkmku.s3.ap-southeast-1.amazonaws.com','https://cl1l5f4jy0.execute-api.ap-southeast-1.amazonaws.com'],
     },
       images: {
         remotePatterns: [

@@ -1,4 +1,8 @@
+import { headers } from 'next/headers';
 export default function manifest() {
+    const headersList = headers();
+    let domain = headersList.get('host');
+    let proto = headersList.get('x-forwarded-proto');
     return {
         "short_name": "robeth.my.id",
         "name": "robeth.my.id",
@@ -27,6 +31,6 @@ export default function manifest() {
             "sizes": "192x192"
             }
         ],
-        "start_url": "https://robeth.my.id?utm_source=launcher"
+        "start_url": proto+'://'+domain+"?utm_source=launcher"
     }
   }

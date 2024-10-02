@@ -113,18 +113,15 @@ export default function _home({ data }) {
                 <div className="flip-card animated-toright cursor img-avatar-big rounded-circle">
                   <div className="flip-card-inner ">
                     <div className="flip-card-front  border-0 rounded-circle">
-                      <Image priority={true} sizes="100vw" width={0} height={0} alt={data.name} className=""
-                        src={data.logo} />
+                      <Image priority={true} sizes="100vw" width={0} height={0} alt="Achmed Robeth Muzaki" src={data.logo} />
                     </div>
                     <div className="flip-card-back border-0 rounded-circle">
-                      <Image priority={true} sizes="100vw" width={0} height={0} alt={data.name}  className=""
-                        src={data.logo}  />
+                      <Image priority={true} sizes="100vw" width={0} height={0} alt="Achmed Robeth Muzaki" src={data.logo}  />
 
                     </div>
                   </div>
                 </div>
-                <Image priority={true} sizes="100vw" width={0} height={0} className="img-avatar-big img-avatar-q position-absolute  rounded-circle"
-                  src={data.image}  alt={data.name}  />
+                <Image priority={true} sizes="100vw" width={0} height={0} className="img-avatar-big img-avatar-q position-absolute  rounded-circle" src={data.image} alt="Achmed Robeth Muzaki"   />
               </div>
               <p className="text-lg-center my-3">
                 {
@@ -148,7 +145,7 @@ export default function _home({ data }) {
                     <h2 className="h1">UMKM punya website gratis!</h2>
                   </div>
                   <div className="col-md-3">
-                    <Image style={{ width: '100%', height: 'auto' }} priority={true} sizes="100vw" width={0} height={0} className="w-100" src="https://umkmku.s3.ap-southeast-1.amazonaws.com/rbtimg/jadpro-svg-mini-png.svg" alt="umkm jadipro" />
+                    <Image priority={true} sizes="100vw" width={0} height={0} className="w-100 h-auto" src="https://umkmku.s3.ap-southeast-1.amazonaws.com/rbtimg/jadpro-svg-mini-png.svg" alt="umkm jadipro" />
                   </div>
                 </div>
               </Link>
