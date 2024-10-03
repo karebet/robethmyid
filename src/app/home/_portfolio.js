@@ -10,7 +10,7 @@ export default function _portfolio({data=[]}) {
             <span className="h1 mb-0 d-inline-block">{data.length} </span><span className=" fw-300">Portofolio</span>
             {
                 data.map((x,i)=>(
-                    <Link key={i} className={x.bg+' '+x.tx +' '+(limitview<i && showall==false?'  d-none ':' ')+' d-block shadow project-item  rounded-5 mb-5 px-5 text-decoration-none'} target="_blank" href={x.url}>
+                    <Link key={i} aria-label={x.title} title={x.title} className={x.bg+' '+x.tx +' '+(limitview<i && showall==false?'  d-none ':' ')+' d-block shadow project-item  rounded-5 mb-5 px-5 text-decoration-none'} target="_blank" href={x.url}>
                         <span className="row position-relative py-4">
                             <span className="col-md-7">
                                 <h2 className="h3 mb-0">{x.title}</h2>

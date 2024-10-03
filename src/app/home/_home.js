@@ -133,7 +133,7 @@ export default function _home({ data }) {
                 {
                   data.link_sosmed.map((item, index) => {
                     return (
-                      <Link key={index} target="_blank" href={item.link} name={item.name + " " + data.name}
+                      <Link key={index} target="_blank" href={item.link} aria-label={item.name + " " + data.name}
                         className="text-dark text-decoration-none d-inline-block me-2">
                         <i className={iconku[item.icon]}></i>
                       </Link>
