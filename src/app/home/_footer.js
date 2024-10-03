@@ -106,11 +106,11 @@ export default function _footer({data=[]}) {
                                     <div className="col-8 col-md-9 text-start">
                                         <span className="mb-0 h5 fw-bold">Achmed Robeth Muzaki</span>
                                         <p className="mb-0 text-muted small">{data.core_position}</p>
-                                        <Link aria-label="Linkedin Robeth Muzaki" target="_blank" href="//www.linkedin.com/in/achmed-robeth-muzaki"
+                                        <Link aria-label="Linkedin Robeth Muzaki" target="_blank" rel="noreferrer" href="//www.linkedin.com/in/achmed-robeth-muzaki"
                                             className="text-dark text-decoration-none me-2 d-inline-block">
                                             <i className="fab fa-linkedin-in"></i>
                                         </Link> 
-                                        <Link aria-label="Whatsapp Robeth Muzaki" target="_blank" href="//wa.me/6282170699887"
+                                        <Link aria-label="Whatsapp Robeth Muzaki" target="_blank" rel="noreferrer" href="//wa.me/6282170699887"
                                             className="text-dark text-decoration-noned-inline-block me-2 "><i className="fab fa-whatsapp"></i></Link>
 
                                     </div>

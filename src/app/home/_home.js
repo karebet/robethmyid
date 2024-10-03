@@ -86,27 +86,13 @@ export default function _home({ data }) {
             <div className="col-md-6 pe-md-0">
               
               <div className="typing-effect" id="typing">
-                <h1 className="h1 fw-bold">👋 Hi, <span className="fw-light">i'm</span> Robeth Muzaki</h1>
-                <p className="h3">Fullstack Developer & Head of IT <br />di <Link className="text-dark link-underline-dark"
-                  href="https://iziroam.com">iziRoam</Link>.</p>
-                <p>Saya adalah seorang Programmer, yang sudah {new Date().getFullYear() - 2011} tahun mendalami bidang Teknologi.
-                </p>
-                <p>Sering membuat Aplikasi / Web:</p>
-                <ul>
-                  <li>CMMS, GIS & ERP</li>
-                  <li>E-Commerce , Company Profile & Toko Online</li>
-                  <li>Mobile Applications & Game</li>
-                </ul>
-                <p>
-                  Jika memiliki Project, dengan senang hati saya akan membantu untuk menyelesaikannya. <br />
-                  <Link className=" btn btn-dark btn-lg rounded-pill px-5" href="#footer">Hubungi Saya</Link>
-                </p>
+                <div dangerouslySetInnerHTML={{__html:text}}></div>
               </div>
               {
                 typingfinish==true?
                   <div className="row">
                     <div className="col-md-7">
-                    <Link className=" btn btn-dark btn-lg rounded-pill px-5 w-100 mb-5 shadow" href="#footer">Hubungi Saya</Link>
+                    <Link className=" btn btn-dark btn-lg rounded-pill px-5 w-100 my-5 shadow" href="#footer">Hubungi Saya</Link>
                     </div>
                   </div>
                   
@@ -133,7 +119,7 @@ export default function _home({ data }) {
                 {
                   data.link_sosmed.map((item, index) => {
                     return (
-                      <Link key={index} target="_blank" href={item.link} aria-label={item.name + " " + data.name}
+                      <Link key={index} target="_blank"  rel="noreferrer" href={item.link} aria-label={item.name + " " + data.name}
                         className="text-dark text-decoration-none d-inline-block me-2">
                         <i className={iconku[item.icon]}></i>
                       </Link>
@@ -145,7 +131,7 @@ export default function _home({ data }) {
           </div>
           <div className="row mb-5">
             <div className="col-md-12">
-              <Link target="_blank" href="https://jadipro.id" className="text-decoration-none card card-body px-5 rounded-5 pb-0 shadow border-0 bg-primary">
+              <Link target="_blank"  rel='noreferrer' href="https://jadipro.id" className="text-decoration-none card card-body px-5 rounded-5 pb-0 shadow border-0 bg-primary">
                 <div className="row align-items-center">
                   <div className="col-md-9">
                     <h2 className="h1">UMKM punya website gratis!</h2>

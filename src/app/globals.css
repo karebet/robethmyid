@@ -615,8 +615,25 @@ body {
 
 .notfound {
   max-width: 410px;
-  width: 100%;
+  
   text-align: center; }
+
+.notfound .notfound-404::before {
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  content: "";
+  background: url("https://umkmku.s3.ap-southeast-1.amazonaws.com/img/20240306-logorobeth.png")  no-repeat;
+  background-position: top center;
+  background-size: contain;
+  width: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 
 .notfound .notfound-404 {
   height: 280px;
@@ -633,8 +650,7 @@ body {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  /* background: url("https://d8uxk5ybnhrkr.cloudfront.net/external/rbt/zroam/20230726-page404.jpg") no-repeat;
-   */
+  background: url("https://umkmku.s3.ap-southeast-1.amazonaws.com/img/20240306-logorobeth.png")  no-repeat;
    -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: cover;
@@ -661,7 +677,7 @@ body {
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
-  background: #0046d5;
+  background: rgb(255, 0, 0);
   display: inline-block;
   padding: 15px 30px;
   border-radius: 40px;
