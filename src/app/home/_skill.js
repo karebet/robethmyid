@@ -11,21 +11,21 @@ export default function _skill({data=[]}) {
                             {
                                 dataskill.map((x) => (
                                 <li className="highway-car" key={x}>
-                                    <Image className="w-100" style={{ width: '100%', height: 'auto' }} priority={true} sizes="100vw" width={0} height={0}  src={data[x]} alt={x+' skill Robeth'} />
+                                    <Image className="w-100" style={{ width: '100%', height: 'auto' }} priority={false} sizes="50vw" width={0} height={0}  src={data[x]} alt={x+' skill Robeth'} />
                                 </li>
                                 ))
                             }
                             {
                                 dataskill.map((x) => (
                                 <li className="highway-car" key={x}>
-                                    <Image className="w-100" style={{ width: '100%', height: 'auto' }} priority={true} sizes="100vw" width={0} height={0}  src={data[x]} alt={x+' skill Robeth'} />
+                                    <Image className="w-100" style={{ width: '100%', height: 'auto' }} priority={false} sizes="50vw" width={0} height={0}  src={data[x]} alt={x+' skill Robeth'} />
                                 </li>
                                 ))
                             }
                             {
                                 dataskill.map((x) => (
                                 <li className="highway-car" key={x}>
-                                    <Image className="w-100" style={{ width: '100%', height: 'auto' }} priority={true} sizes="100vw" width={0} height={0}  src={data[x]} alt={x+' skill Robeth'} />
+                                    <Image className="w-100" style={{ width: '100%', height: 'auto' }} priority={false} sizes="50vw" width={0} height={0}  src={data[x]} alt={x+' skill Robeth'} />
                                 </li>
                                 ))
                             }

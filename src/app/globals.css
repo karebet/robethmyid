@@ -170,7 +170,10 @@ body {
 
 .slick-next {
   right: 0px; }
-
+.image-shadow{
+  -webkit-filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+}
 .bg-btn-navigate {
   background: #038ed1;
   background: -moz-linear-gradient(90deg, #038ed1 1%, #090979 59%, #050448 99%);

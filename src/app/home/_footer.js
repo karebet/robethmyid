@@ -52,6 +52,8 @@ export default function _footer({data=[]}) {
                     setChatData(datalama);
                     setMessage("");
                     areamessagetextarea.current.value = "";
+                    areamessagetextarea.current.style.height = "auto";
+                    areamessagetextarea.current.focus();
             }
           } catch (error) {
             console.error("Error fetching packages:", error);
@@ -72,7 +74,12 @@ export default function _footer({data=[]}) {
                                 <div className="mb-4">
                                     {
                                         email.length>0?
-                                        <input readOnly data-bs-toggle="modal" data-bs-target="#modalcreatepesan" type="text" placeholder="Ceritakan Project Anda"
+                                        <input readOnly onClick={(e)=>{
+                                            setTimeout(function() {
+                                                areamessagetextarea.current.focus();
+                                              }, 2000);
+                                            
+                                        }} data-bs-toggle="modal" data-bs-target="#modalcreatepesan" type="text" placeholder="Ceritakan Project Anda"
                                         className="shadow form-control form-control-lg rounded-pill" />
                                         :
                                         <input readOnly onClick={(e)=>{
@@ -94,16 +101,16 @@ export default function _footer({data=[]}) {
                             <div className="rounded-linkedin d-block rounded-pill p-3 border border-dark">
                                 <div className="row">
                                     <div className="col-4 col-md-3">
-                                        <Image sizes="100vw" width={0} height={0}  className="w-100 h-auto rounded-circle" src={data.image} alt={data.title} />
+                                        <Image priority={true} sizes="80vw" width={0} height={0}  className="w-100 h-auto rounded-circle" src={data.image} alt={data.title} />
                                     </div>
                                     <div className="col-8 col-md-9 text-start">
                                         <span className="mb-0 h5 fw-bold">Achmed Robeth Muzaki</span>
                                         <p className="mb-0 text-muted small">{data.core_position}</p>
-                                        <Link target="_blank" href="//www.linkedin.com/in/achmed-robeth-muzaki"
+                                        <Link name="Linkedin Robeth Muzaki" target="_blank" href="//www.linkedin.com/in/achmed-robeth-muzaki"
                                             className="text-dark text-decoration-none me-2 d-inline-block">
                                             <i className="fab fa-linkedin-in"></i>
                                         </Link> 
-                                        <Link target="_blank" href="//wa.me/6282170699887"
+                                        <Link name="Whatsapp Robeth Muzaki" target="_blank" href="//wa.me/6282170699887"
                                             className="text-dark text-decoration-noned-inline-block me-2 "><i className="fab fa-whatsapp"></i></Link>
 
                                     </div>
@@ -167,7 +174,11 @@ export default function _footer({data=[]}) {
                         <div className="modal-body bottom-rounded bg-wa-chat">
                             <div className="row">
                                         <div className="col-10">
-                                            <textarea ref={areamessagetextarea} onChange={(e)=>setMessage(e.target.value)} id="modal-message" placeholder="Ketik disini" className="form-control rounded-4" name="" rows="1"></textarea>
+                                            <textarea ref={areamessagetextarea} onChange={(e)=>{
+                                                const target = e.target;
+                                                areamessagetextarea.current.style.height = "auto";
+                                                areamessagetextarea.current.style.height = `${target.scrollHeight}px`;
+                                                setMessage(e.target.value)}} id="modal-message" placeholder="Ketik disini" className="form-control rounded-4" name="" rows="1"></textarea>
                                         </div>
                                         <div className="col-2">
                                             <button onClick={async function(e){

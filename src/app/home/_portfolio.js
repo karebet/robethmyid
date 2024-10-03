@@ -24,18 +24,18 @@ export default function _portfolio({data=[]}) {
                         
                         <span className="row">
                             <span className="col-md-12 img-rounded-project-area">
-                                <Image priority={true} sizes="100vw" width={0} height={0} className="w-100 img-rounded-project" src={x.img} alt={x.title} />
+                                <Image sizes="100vw" width={0} height={0} className="w-100 img-rounded-project" src={x.img} alt={x.title} />
                             </span>
                         </span>
                     </Link>
                 ))
             }
 
-            <div className="text-center">
+            <div className="text-center row justify-content-center">
                 {
                     showall?
                     "":
-                    <span className="btn btn-outline-dark rounded-pill px-5 " onClick={() => setShowall(true)}> Lihat {remaining} lainnya</span>
+                    <div className="col-md-5"><div className="px-5"><span className="btn btn-outline-dark rounded-pill px-5 w-100 w-md-auto mb-5 btn-lg shadow" onClick={() => setShowall(true)}> Lihat {remaining} lainnya</span></div></div>
                 }
             </div>
         </section>

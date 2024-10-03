@@ -103,31 +103,37 @@ export default function _home({ data }) {
                 </p>
               </div>
               {
-                typingfinish==true?<Link className=" btn btn-dark btn-lg rounded-pill px-5" href="#footer">Hubungi Saya</Link>:''
+                typingfinish==true?
+                  <div className="row">
+                    <div className="col-md-7">
+                    <Link className=" btn btn-dark btn-lg rounded-pill px-5 w-100 mb-5 shadow" href="#footer">Hubungi Saya</Link>
+                    </div>
+                  </div>
+                  
+                :''
               }
 
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-5">
-              <div className="position-relative">
+              <div className="position-relative mx-auto ">
                 <div className="flip-card animated-toright cursor img-avatar-big rounded-circle">
                   <div className="flip-card-inner ">
                     <div className="flip-card-front  border-0 rounded-circle">
-                      <Image priority={true} sizes="100vw" width={0} height={0} alt="Achmed Robeth Muzaki" src={data.logo} />
+                      <Image priority={true} sizes="80vw" width={0} height={0} alt={data.name} src={data.logo} className="image-shadow" />
                     </div>
                     <div className="flip-card-back border-0 rounded-circle">
-                      <Image priority={true} sizes="100vw" width={0} height={0} alt="Achmed Robeth Muzaki" src={data.logo}  />
-
+                      <Image priority={true} sizes="80vw" width={0} height={0} alt={data.name} src={data.logo} className="image-shadow" />
                     </div>
                   </div>
                 </div>
-                <Image priority={true} sizes="100vw" width={0} height={0} className="img-avatar-big img-avatar-q position-absolute  rounded-circle" src={data.image} alt="Achmed Robeth Muzaki"   />
+                <Image priority={true} sizes="80vw" width={0} height={0} className="img-avatar-big img-avatar-q position-absolute image-shadow rounded-circle" src={data.image} alt={data.name} />
               </div>
-              <p className="text-lg-center my-3">
+              <p className="text-center my-3 mx-auto">
                 {
                   data.link_sosmed.map((item, index) => {
                     return (
-                      <Link key={index} target="_blank" href={item.link}
+                      <Link key={index} target="_blank" href={item.link} name={item.name + " " + data.name}
                         className="text-dark text-decoration-none d-inline-block me-2">
                         <i className={iconku[item.icon]}></i>
                       </Link>
@@ -145,7 +151,7 @@ export default function _home({ data }) {
                     <h2 className="h1">UMKM punya website gratis!</h2>
                   </div>
                   <div className="col-md-3">
-                    <Image priority={true} sizes="100vw" width={0} height={0} className="w-100 h-auto" src="https://umkmku.s3.ap-southeast-1.amazonaws.com/rbtimg/jadpro-svg-mini-png.svg" alt="umkm jadipro" />
+                    <Image sizes="100vw" width={0} height={0} className="w-100 h-auto" src="https://umkmku.s3.ap-southeast-1.amazonaws.com/rbtimg/jadpro-svg-mini-png.svg" alt="umkm jadipro" />
                   </div>
                 </div>
               </Link>
