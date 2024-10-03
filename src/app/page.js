@@ -4,7 +4,7 @@ export default async function Home() {
   const ambildatax = async () => {
     const url = process.env.URLDATA;
     try {
-      const response = await fetch(url.toString(), { cache: 'no-store' });
+      const response = await fetch(url.toString());
       if (!response.ok) {
         throw new Error('Failed to fetch');
       }
