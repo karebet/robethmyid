@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google'
 import { GoogleTagManager } from '@next/third-parties/google'
 import Favicon from '/public/20240306-logorobeth.ico';
 import { headers } from 'next/headers';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: "Achmed Robeth Muzaki | robeth.my.id",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
       <GoogleTagManager gtmId="G-S30XTKRLRY" />
       <body className={fontpopins.className}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
