@@ -5,6 +5,7 @@ export default function manifest() {
     let proto = headersList.get('x-forwarded-proto');
     return {
         "short_name": "robeth.my.id",
+        "site_name":"Achmed Robeth Muzaki | robeth.my.id",
         "name": "robeth.my.id",
         "theme_color": "#ffffff",
         "background_color": "#ffffff",
@@ -31,6 +32,7 @@ export default function manifest() {
             "sizes": "192x192"
             }
         ],
+        "url": proto+'://'+domain+"",
         "start_url": proto+'://'+domain+"?utm_source=launcher"
     }
   }
