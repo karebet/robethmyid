@@ -35,12 +35,12 @@ export default function _footer({data=[]}) {
         datalama.push({user:'me',message:message});
         setChatData(datalama);
         try {
-            const response = await fetch('https://cl1l5f4jy0.execute-api.ap-southeast-1.amazonaws.com/be/robethmyid-contact'.toString(),{
+            const response = await fetch('https://cl1l5f4jy0.execute-api.ap-southeast-1.amazonaws.com/be/inbox'.toString(),{
                  method: "POST",
                  headers: {
                     'Accept': 'application/json'
                   },
-                 body: JSON.stringify({email, message}),
+                 body: JSON.stringify({email, message,code:"contact-robethmyid-2025"}),
             });
             if (!response.ok) {
               throw new Error('Failed to fetch');
