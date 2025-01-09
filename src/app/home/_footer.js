@@ -38,7 +38,7 @@ export default function _footer({data=[]}) {
             const response = await fetch('https://cl1l5f4jy0.execute-api.ap-southeast-1.amazonaws.com/be/inbox'.toString(),{
                  method: "POST",
                  headers: {
-                    'Accept': 'application/json'
+                    'Content-Type': 'application/json'
                   },
                  body: JSON.stringify({email, message,code:"contact-robethmyid-2025"}),
             });
