@@ -35,7 +35,7 @@ export default function _footer({data=[]}) {
         datalama.push({user:'me',message:message});
         setChatData(datalama);
         try {
-            const response = await fetch('https://script.google.com/macros/s/AKfycbx73dIaGGQWZPpCN22yfpeQhzQLp2InrbzyXzn0dxic61tNHqbqDZbHv49cbn5CAZg5/exec'.toString(),{
+            const response = await fetch('https://script.google.com/macros/s/AKfycbzXRiCZy51DHh6Ap5XBV615prZOMyXF_OP_JM-iMvlJ8Lqzq0YDXqDHX3sB0O8Tq9yE/exec'.toString(),{
                  method: "POST",
                  headers: {
                     'Content-Type': 'application/json'
