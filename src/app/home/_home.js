@@ -131,7 +131,7 @@ export default function _home({ data }) {
           </div>
           <div className="row mb-5">
             <div className="col-md-12">
-              <Link target="_blank"  rel='noreferrer' href="https://jadipro.id" className="text-decoration-none card card-body px-5 rounded-5 pb-0 shadow border-0 bg-primary">
+              <Link target="_blank"  rel='noreferrer' href="https://jdpro-site.vercel.app/" className="text-decoration-none card card-body px-5 rounded-5 pb-0 shadow border-0 bg-primary">
                 <div className="row align-items-center">
                   <div className="col-md-9">
                     <h2 className="h1">UMKM punya website gratis!</h2>
